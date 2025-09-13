@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIMALL - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/products.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-store"></i>UNIMALL
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="products.html" class="active"><i class="fas fa-box"></i> Products</a></li>
+                        <li><a href="#"><i class="fas fa-user-tie"></i> Vendor</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container page-header-content">
+            <h1>Our Products</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Products</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <div class="container">
+        <div class="products-container">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filter-header">
+                    <h2>Filters</h2>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <ul class="filter-options">
+                        <li>
+                            <input type="checkbox" id="cat-electronics">
+                            <label for="cat-electronics">Electronics</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat-fashion">
+                            <label for="cat-fashion">Fashion</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat-home">
+                            <label for="cat-home">Home & Kitchen</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat-beauty">
+                            <label for="cat-beauty">Health & Beauty</label>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <input type="range" class="price-range" min="0" max="1000000" step="10000" value="500000">
+                    <div class="price-values">
+                        <span>₦0</span>
+                        <span>₦1,000,000</span>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Brand</h3>
+                    <ul class="filter-options">
+                        <li>
+                            <input type="checkbox" id="brand-samsung">
+                            <label for="brand-samsung">Samsung</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="brand-apple">
+                            <label for="brand-apple">Apple</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="brand-sony">
+                            <label for="brand-sony">Sony</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="brand-lg">
+                            <label for="brand-lg">LG</label>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Rating</h3>
+                    <ul class="filter-options">
+                        <li>
+                            <input type="checkbox" id="rating-5">
+                            <label for="rating-5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i> & Up
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="rating-4">
+                            <label for="rating-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i> & Up
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="rating-3">
+                            <label for="rating-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i> & Up
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            
+            <!-- Products Grid -->
+            <div class="products-grid-container">
+                <div class="products-header">
+                    <div class="results-count">Showing 12 of 128 products</div>
+                    <div class="sort-options">
+                        <span>Sort by:</span>
+                        <select>
+                            <option>Newest</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Highest Rated</option>
+                        </select>
+                        <div class="view-options">
+                            <button class="active"><i class="fas fa-th"></i></button>
+                            <button><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-badge">Sale</div>
+                        <div class="product-img">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Smartphone XYZ</h3>
+                            <div class="product-price">₦ 185,000</div>
+                            <div class="product-vendor">TechGadgets Inc.</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                (124)
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Ultrabook Pro</h3>
+                            <div class="product-price">₦ 420,000</div>
+                            <div class="product-vendor">CompTech</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                (87)
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-img">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Wireless Headphones</h3>
+                            <div class="product-price">₦ 65,000</div>
+                            <div class="product-vendor">AudioMasters</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                (215)
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <i class="fas fa-watch"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Smart Watch Series 5</h3>
+                            <div class="product-price">₦ 95,000</div>
+                            <div class="product-vendor">WearableTech</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                (153)
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-img">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Tablet Pro Max</h3>
+                            <div class="product-price">₦ 150,000</div>
+                            <div class="product-vendor">TechGadgets Inc.</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                (98)
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Smart TV 55"</h3>
+                            <div class="product-price">₦ 320,000</div>
+                            <div class="product-vendor">VisualTech</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                (167)
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 7 -->
+                    <div class="product-card">
+                        <div class="product-badge">Sale</div>
+                        <div class="product-img">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Digital Camera Pro</h3>
+                            <div class="product-price">₦ 210,000</div>
+                            <div class="product-vendor">PhotoMasters</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                (201)
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 8 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Gaming Console</h3>
+                            <div class="product-price">₦ 280,000</div>
+                            <div class="product-vendor">GameTech</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                (132)
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MultiVendor Store</h3>
+                    <p>Your one-stop shop for all your needs. Quality products from trusted vendors.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">Vendor Dashboard</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" style="padding: 12px; width: 100%; margin-bottom: 15px; border-radius: 30px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 AKA TECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                this.innerHTML = '<i class="fas fa-check"></i> Added to Cart';
+                this.style.background = 'var(--success)';
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
+                    this.style.background = '';
+                }, 2000);
+            });
+        });
+
+        // View options toggle
+        document.querySelectorAll('.view-options button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.view-options button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Here you would toggle between grid and list view
+                // For simplicity, we're just toggling the active class
+            });
+        });
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
